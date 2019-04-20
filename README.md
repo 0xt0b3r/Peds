@@ -20,3 +20,8 @@ Config.EnableDixon = false   -- If true spawn Dixon at Nightclub
 (Add Teleporters for Nightclub Update bob74 Interior & Add LCD Screens)
 [NightclubAddon](https://github.com/SFL-Master/FiveM_NightclubAddon)
 
+**add to server.cfg**
+
+```
+start peds
+```
