@@ -502,9 +502,9 @@ Citizen.CreateThread(function()
 			RequestAnimDict("anim@amb@nightclub@peds@")
 			TaskPlayAnim(npc,"anim@amb@nightclub@peds@","amb_world_human_stand_guard_male_base",1.0, 0.0, 500, 1, 10, false, false, false)
 			GiveWeaponToPed(npc, GetHashKey("WEAPON_BOTTLE"), 1, false, true)
-            GiveWeaponToPed(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100), true, false)
-            SetPedAmmo(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100))
-            SetCurrentPedWeapon(npc, GetHashKey("WEAPON_PISTOL"), true)
+                        GiveWeaponToPed(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100), true, false)
+                        SetPedAmmo(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100))
+                        SetCurrentPedWeapon(npc, GetHashKey("WEAPON_PISTOL"), true)
 		end
 	end
 end)
