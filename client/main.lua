@@ -297,3 +297,214 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+-- Biker Guards2 (Druglabors & Points, Biker DLC)
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("s_m_m_chemsec_01"))
+	
+    while not HasModelLoaded(GetHashKey("s_m_m_chemsec_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableDrugs then
+		for _, item in pairs(Config.Locations14) do
+			local npc = CreatePed(1, 0x2EFEAFD5, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@nightclub@peds@")
+			TaskPlayAnim(npc,"anim@amb@nightclub@peds@","amb_world_human_stand_guard_male_base",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Biker NPC1 MethCook
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("g_m_m_chemwork_01"))
+	
+    while not HasModelLoaded(GetHashKey("g_m_m_chemwork_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableDrugs then
+		for _, item in pairs(Config.Locations15) do
+			local npc = CreatePed(1, 0xf6157d8f, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@business@meth@meth_monitoring_cooking@cooking@")
+			TaskPlayAnim(npc,"anim@amb@business@meth@meth_monitoring_cooking@cooking@","look_around_v8_cooker",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Biker NPC2 Meth Worker
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("g_m_m_chemwork_01"))
+	
+    while not HasModelLoaded(GetHashKey("g_m_m_chemwork_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableDrugs then
+		for _, item in pairs(Config.Locations16) do
+			local npc = CreatePed(1, 0xf6157d8f, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@business@meth@meth_monitoring_cooking@monitoring@")
+			TaskPlayAnim(npc,"anim@amb@business@meth@meth_monitoring_cooking@monitoring@","check_guages_monitor",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Biker NPC3 Coca & Opium Worker
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("g_m_m_chemwork_01"))
+	
+    while not HasModelLoaded(GetHashKey("g_m_m_chemwork_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableDrugs then
+		for _, item in pairs(Config.Locations17) do
+			local npc = CreatePed(1, 0xf6157d8f, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@business@meth@meth_monitoring_cooking@monitoring@")
+			TaskPlayAnim(npc,"anim@amb@business@meth@meth_monitoring_cooking@monitoring@","check_guages_v1_monitor",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Biker NPC4 Weed Worker
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("a_m_m_farmer_01"))
+	
+    while not HasModelLoaded(GetHashKey("a_m_m_farmer_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableDrugs then
+		for _, item in pairs(Config.Locations18) do
+			local npc = CreatePed(1, 0x94562dd7, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@business@weed@weed_inspecting_lo_med_hi@")
+			TaskPlayAnim(npc,"anim@amb@business@weed@weed_inspecting_lo_med_hi@","weed_stand_checkingleaves_kneeling_01_inspector",2.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Cops Men LSPD1
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("s_m_y_cop_01"))
+	
+    while not HasModelLoaded(GetHashKey("s_m_y_cop_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableCops then
+		for _, item in pairs(Config.Locations19) do
+			local npc = CreatePed(1, 0x5e3da4a4, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@heists@prison_heiststation@cop_reactions")
+			TaskPlayAnim(npc,"anim@heists@prison_heiststation@cop_reactions","cop_a_idle",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Cops Men LSPD2
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("s_m_y_cop_01"))
+	
+    while not HasModelLoaded(GetHashKey("s_m_y_cop_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableCops then
+		for _, item in pairs(Config.Locations20) do
+			local npc = CreatePed(1, 0x5e3da4a4, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@heists@prison_heiststation@cop_reactions")
+			TaskPlayAnim(npc,"anim@heists@prison_heiststation@cop_reactions","cop_b_reaction",1.0, 0.0, 500, 1, 10, false, false, false)
+		end
+	end
+end)
+
+-- Cops Girl LSPD3
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("s_f_y_cop_01"))
+	
+    while not HasModelLoaded(GetHashKey("s_f_y_cop_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableCops then
+		for _, item in pairs(Config.Locations21) do
+			local npc = CreatePed(1, 0x15f8700d, item.x, item.y, item.z, item.heading, false, true)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("amb@world_human_cop_idles@female@idle_b")
+			TaskPlayAnim(npc,"amb@world_human_cop_idles@female@idle_b","idle_d",1.0, 0.0, 500, 0, 10, false, false, false)
+		end
+	end
+end)
+ 
+-- Cops Guard LSPD3 Weapons
+Citizen.CreateThread(function()
+    RequestModel(GetHashKey("u_m_m_jewelsec_01"))
+	
+    while not HasModelLoaded(GetHashKey("u_m_m_jewelsec_01")) do
+        Wait(1)
+    end
+	
+	if Config.EnableCops or Config.EnableWeapons then
+		for _, item in pairs(Config.Locations22) do
+			local npc = CreatePed(1, 0xacccbdb6, item.x, item.y, item.z, false, false)
+			
+			FreezeEntityPosition(npc, true)	
+			SetEntityHeading(npc, item.heading)
+			SetEntityInvincible(npc, false) --NPC can die (set "true" to change)
+			SetBlockingOfNonTemporaryEvents(npc, false)
+			SetPedCanPlayAmbientAnims(npc, true)
+			RequestAnimDict("anim@amb@nightclub@peds@")
+			TaskPlayAnim(npc,"anim@amb@nightclub@peds@","amb_world_human_stand_guard_male_base",1.0, 0.0, 500, 1, 10, false, false, false)
+			GiveWeaponToPed(npc, GetHashKey("WEAPON_BOTTLE"), 1, false, true)
+            GiveWeaponToPed(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100), true, false)
+            SetPedAmmo(npc, GetHashKey("WEAPON_PISTOL"), math.random(20, 100))
+            SetCurrentPedWeapon(npc, GetHashKey("WEAPON_PISTOL"), true)
+		end
+	end
+end)
