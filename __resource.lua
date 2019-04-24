@@ -6,6 +6,6 @@ version '1.5.1'
 
 client_scripts {
 
-	'client/peds.lua',
+	'client/main.lua',
 	'config.lua'
 }
